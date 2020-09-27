@@ -1,0 +1,185 @@
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(255, 255, 255, .9); /* try type yellow */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'EB Garamond',Helvetica,roboto;
+  overflow: hidden;
+}
+
+main {
+   max-width: 332px;
+   height: 194px;
+   perspective: 1000;
+}
+.card {
+   width: 100%;
+   height: 100%;
+   position: relative;  
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+i {
+  color: black;
+  width: 24px;
+  height: 24px;
+}
+.card-front {
+  max-width: 332px;
+  height: 194px;  
+  padding: 14px 18px;
+  color: black;
+  background-color: rgba(255, 255, 255, .65);
+  background-image: url(https://github.com/studmuffin30/portfolio-card/blob/master/image/texture1white.png?raw=true);
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-position: center ,bottom;
+  background-repeat: no-repeat;
+  box-shadow: 6px 4px 3px 1px rgba(191, 186, 186, 0.25);
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 332px;
+  height: 194px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #000000;
+  background-color: rgba(255, 255, 255, .65);
+  background-image: url(https://github.com/studmuffin30/portfolio-card/blob/master/image/texture1white.png?raw=true);
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-position: center ,bottom;
+  background-repeat: no-repeat;
+  /* important */
+   transform: rotateY(180deg);
+}
+
+
+/* .card::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+} */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+  padding: 0;
+
+}
+.birth-date {
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 15px;
+text-align: left;
+}
+
+.birth-date--down {
+}
+
+.company {
+  width: 73px;
+  text-align: left;
+  /* outline: 1px solid yellow; */
+}
+.company-title {
+text-transform: uppercase;
+font-size: 10px;
+font-style: normal;
+font-weight: 500;
+line-height: 10px;
+letter-spacing: -0.055em;
+text-align: left;
+}
+.company-title--job {
+text-transform: uppercase;
+font-size: 6.5px;
+font-style: normal;
+font-weight: 500;
+line-height: 10px;
+letter-spacing: -0.048em;
+text-align: left;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 51px;
+  text-transform: uppercase;
+}
+
+.name-person {
+  font-size: 18px;
+  font-weight: 550;
+  
+}
+.name-person--sm {
+  font-size: 11px;
+}
+
+.name-title {
+  font-size: 16px;
+  font-weight: 460;
+}
+.name-title-sm {
+  font-size: 11px;
+}
+.address {
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+  margin-bottom: 14px;
+  font-size: 11px;
+  width: 56ch;
+  line-height: 13.45px;
+  letter-spacing: 0.03em;
+
+}
+p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.address-location {
+  text-transform: uppercase;
+  font-size: 7px;
+  font-weight: 600;
+}
+
+.address-location--lg {
+  font-size: 11px;
+}
+
+.address-email {
+  text-transform: lowercase;
+  font-size: 9.3px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
